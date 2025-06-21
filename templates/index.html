@@ -31,7 +31,7 @@
                                 <div class="blog__slide__img">
                                     <img class="card-img rounded-0"
                                          src="{{ post.image_url }}"
-                                         alt="">
+                                         alt="{{ post.title }}">
                                 </div>
                                 <div class="blog__slide__content">
                                     <h3><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h3>
@@ -54,7 +54,7 @@
                         {% for post in fresh_posts %}
                             <div class="single-recent-blog-post">
                                 <div class="thumb">
-                                    <img class="img-fluid" src="{{ post.image_url }}" alt="">
+                                    <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
                                     <ul class="thumb-info" style="max-width: 550px;">
                                         <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
                                         <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at|date:"j F Y" }}
