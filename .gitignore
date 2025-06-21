@@ -136,3 +136,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Папки IDE (JetBrains)
+.idea/
+
+# Папка с медиа-файлами
+media/
