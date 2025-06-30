@@ -54,7 +54,7 @@
                         {% for post in fresh_posts %}
                             <div class="single-recent-blog-post">
                                 <div class="thumb">
-                                    <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
+                                    <img class="img-fluid" src="{{ post.image_url }}" alt="{% static 'img/banner/blog.png' %}">
                                     <ul class="thumb-info" style="max-width: 550px;">
                                         <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
                                         <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at|date:"j F Y" }}
