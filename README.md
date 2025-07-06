@@ -1,32 +1,50 @@
-# Блог от Лизы
+# Blog Backend
 
-Блог на Django, серверная часть.
+A minimal Django-based blog engine. The project is used in educational tasks at [Devman](https://dvmn.org).
 
-## Запуск
+## Features
 
-Для запуска блога у вас уже должен быть установлен Python 3.
+- CRUD models for posts and comments
+- Like tracking for posts
+- Interactive map on the contact page powered by Folium
+- Django admin interface for content management
 
-- Скачайте код
-- Установите зависимости командой `pip install -r requirements.txt`
-- Запустите сервер командой `python3 manage.py runserver`
+## Quickstart
 
-После этого переходите по ссылке [127.0.0.1:8000](http://127.0.0.1:8000), вы увидите главную страницу.
+1. Ensure you have Python 3 installed.
+2. Clone the repository.
+3. Install dependencies:
 
-## Переменные окружения
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Часть настроек проекта берётся из переменных окружения. Чтобы их определить, создайте файл `.env` рядом с `manage.py` и запишите туда данные в таком формате: `ПЕРЕМЕННАЯ=значение`.
+4. (Optional) Create an `.env` file next to `manage.py` to override default settings. See the configuration section below.
+5. Apply migrations and start the development server:
 
-**Для запуска проекта эти настройки не требуются**, значения уже проставлены по умолчанию.
+   ```bash
+   python manage.py migrate
+   python manage.py runserver
+   ```
 
-Доступны следущие переменные:
-- `DEBUG` — дебаг-режим. Поставьте `True`, чтобы увидеть отладочную информацию в случае ошибки. Выключается значением `False`.
-- `SECRET_KEY` — секретный ключ проекта. Например: `erofheronoirenfoernfx49389f43xf3984xf9384`.
-- `ALLOWED_HOSTS` — см [документацию Django](https://docs.djangoproject.com/en/3.1/ref/settings/#allowed-hosts).
-- `STATIC_URL` — по умолчанию это `'/static/'`. [Что такое STATIC_URL](https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-STATIC_URL).
-- `STATIC_ROOT` — по умолчанию это `'None'`, т.е. текущая папка. [Что такое STATIC_ROOT](https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-STATIC_ROOT).
-- `MEDIA_URL` — по умолчанию это `'/media/'`. [Что такое MEDIA_URL](https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-MEDIA_URL).
-- `MEDIA_ROOT` — по умолчанию это `'media'`. [Что такое MEDIA_ROOT](https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-MEDIA_ROOT).
+Visit <http://127.0.0.1:8000> in your browser to see the site.
 
-## Цели проекта
+## Configuration
 
-Код написан в учебных целях — это урок в курсе по Python и веб-разработке на сайте [Devman](https://dvmn.org).
+Settings can be supplied via environment variables or an `.env` file. The defaults defined in `sensive_blog/settings.py` allow the project to run without customization. Available variables include:
+
+- `DEBUG` — debug mode (`True`/`False`). Default: `True`.
+- `SECRET_KEY` — Django secret key. Default: `REPLACE_ME`.
+- `ALLOWED_HOSTS` — comma-separated hosts. Default: empty.
+- `STATIC_URL` — URL prefix for static files. Default: `/static/`.
+- `STATIC_ROOT` — directory for collected static files. Default: `None`.
+- `MEDIA_URL` — URL prefix for uploaded media. Default: `/media/`.
+- `MEDIA_ROOT` — directory for uploaded media. Default: `media`.
+
+## Project Goals
+
+This repository is for educational purposes as part of the [Devman](https://dvmn.org) curriculum. It demonstrates basic Django functionality and is not intended for production use.
+
+## Contributing
+
+Contributions are welcome. Please open an issue or submit a pull request if you have suggestions or improvements.
